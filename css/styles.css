@@ -101,14 +101,13 @@ textarea {
 }
 
 .container {
-  max-width: 1158px;
+  width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
   margin: 0 auto;
 }
 
 .section {
-  width: 100%;
   padding: 120px 0;
 }
 
