@@ -101,37 +101,15 @@ textarea {
 }
 
 .container {
-  min-width: 320px;
-  max-width: 428px;
+  width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
   margin: 0 auto;
 }
 
-/* Tablet */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
-
-/* Desktop */
-@media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1158px;
-  }
-}
-
 .section {
   width: 100%;
-  padding: 96px 0;
-}
-
-/* Desktop */
-@media screen and (min-width: 1200px) {
-  .section {
-    padding: 120px 0;
-  }
+  padding: 120px 0;
 }
 
 /*----------------------- Header section----------------------- */
@@ -298,13 +276,16 @@ textarea {
 
 .benefits-list {
   display: flex;
-  gap: 24px;
 }
 
 .benefits-item {
   width: 100%;
   height: 100%;
-  flex-basis: calc((100% - 72px) / 4);
+  margin-right: 24px;
+}
+
+.benefits-item:last-child {
+  margin-right: 0;
 }
 
 .benefits-item-box {
@@ -343,7 +324,9 @@ textarea {
   width: 100%;
   padding-bottom: 120px;
 }
-
+.services-container {
+  display: block;
+}
 .services-title {
   font-weight: 700;
   font-size: 36px;
@@ -355,11 +338,10 @@ textarea {
 }
 .services-list {
   display: flex;
-  gap: 24px;
 }
 
-.services-item {
-  flex-basis: calc((100% - 48px) / 3);
+.services-item:not(:last-child) {
+  margin-right: 24px;
 }
 
 /*---------------------- Team section---------------------- */
@@ -382,21 +364,24 @@ textarea {
 
 .team-list {
   display: flex;
-  gap: 24px;
 }
 
 .team-item {
-  flex-basis: calc((100% - 72px) / 4);
-
+  margin-right: 24px;
   background-color: var(--background-main-color);
+
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
   border-radius: 0px 0px 4px 4px;
 }
 
+.team-item:last-child {
+  margin-right: 0;
+}
+
 .team-text-wrap {
   display: block;
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .team-item-title {
@@ -464,7 +449,6 @@ textarea {
 
 .customers-list {
   display: flex;
-  justify-content: center;
   gap: 24px;
 }
 
