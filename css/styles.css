@@ -101,7 +101,6 @@ textarea {
 }
 
 .container {
-  min-width: 320px;
   max-width: 428px;
   margin-right: auto;
   margin-left: auto;
@@ -314,18 +313,7 @@ textarea {
 }
 
 .benefits-item-box {
-  max-width: 264px;
-  height: 112px;
   display: none;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 8px;
-  border-radius: 4px;
-  background-color: var(--background-light-color);
-}
-
-.benefits-item-icon {
-  fill: currentColor;
 }
 
 .benefits-item-title {
@@ -363,8 +351,21 @@ textarea {
   }
   .benefits-item-box {
     display: flex;
+    max-width: 264px;
+    height: 112px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    background-color: var(--background-light-color);
   }
+
+  .benefits-item-icon {
+    fill: currentColor;
+  }
+
   .benefits-item-title {
+    text-align: left;
     font-weight: 500;
     line-height: 1.2;
     font-size: 20px;
