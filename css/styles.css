@@ -379,32 +379,32 @@ textarea {
 /*---------------------- Services section---------------------- */
 .services-section {
   display: none;
-  width: 100%;
-  padding-bottom: 120px;
-}
-
-.services-title {
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.11;
-  text-align: center;
-  text-transform: capitalize;
-  margin-bottom: 72px;
-  color: var(--title-main-color);
-}
-.services-list {
-  display: flex;
-  gap: 24px;
-}
-
-.services-item {
-  flex-basis: calc((100% - 48px) / 3);
 }
 
 /* Desktop */
 @media screen and (min-width: 1158px) {
   .services-section {
     display: flex;
+    width: 100%;
+    padding-bottom: 120px;
+  }
+
+  .services-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 72px;
+    color: var(--title-main-color);
+  }
+  .services-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .services-item {
+    flex-basis: calc((100% - 48px) / 3);
   }
 }
 
@@ -492,7 +492,7 @@ textarea {
 /* Tablet */
 @media screen and (min-width: 768px) {
   .team-container {
-    width: 584px;
+    max-width: 584px;
   }
   .team-item {
     flex-basis: calc((100% - 24px) / 2);
@@ -503,7 +503,7 @@ textarea {
 @media screen and (min-width: 1158px) {
   .team-container {
     flex-direction: column;
-    width: 1158px;
+    max-width: 1158px;
   }
   .team-item {
     flex-basis: calc((100% - 72px) / 4);
@@ -562,7 +562,7 @@ textarea {
 /* Tablet */
 @media screen and (min-width: 768px) {
   .customers-container {
-    width: 584px;
+    max-width: 584px;
   }
   .customers-list {
     gap: 72px 24px;
@@ -575,7 +575,7 @@ textarea {
 /* Desktop */
 @media screen and (min-width: 1158px) {
   .customers-container {
-    width: 1158px;
+    max-width: 1158px;
   }
 
   .customers-item {
@@ -587,17 +587,17 @@ textarea {
 
 .footer-section {
   background-color: var(--footer-background-color);
+  display: block;
 }
 
 .footer-general-container {
-  display: flex;
-  flex-direction: column;
+  display: block;
   justify-content: center;
 }
 
 .footer-text-container {
   text-align: center;
-  margin: 0 auto;
+  margin-bottom: 72px;
 }
 
 .footer-logo {
@@ -623,7 +623,7 @@ textarea {
   line-height: 1.5;
   color: var(--text-second-color);
   text-align: left;
-  margin-bottom: 72px;
+  margin: 0 auto;
 }
 
 .footer-soc-container {
@@ -692,7 +692,7 @@ textarea {
 .footer-form-input {
   display: block;
   font-family: inherit;
-  min-width: 398px;
+  width: 100%;
   height: 40px;
   margin-bottom: 16px;
   padding: 8px 16px;
@@ -749,6 +749,45 @@ textarea {
   display: block;
   fill: currentColor;
   margin-left: 16px;
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .footer-general-container {
+    max-width: 584px;
+    display: flex;
+    gap: 72px 24px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    align-items: baseline;
+  }
+
+  .footer-text-container {
+    margin-bottom: 0;
+  }
+
+  .footer-soc-list {
+    margin-bottom: 0;
+  }
+
+  .footer-form-container {
+    display: block;
+    text-align: left;
+  }
+
+  .footer-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .footer-form-field {
+    display: block;
+  }
+
+  .footer-form-input {
+    width: 264px;
+  }
 }
 
 /*---------------------- Modal section---------------------- */
