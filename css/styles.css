@@ -76,7 +76,7 @@ address {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -103,9 +103,10 @@ textarea {
 .container {
   min-width: 320px;
   max-width: 428px;
-  margin: 0 auto;
-  padding: 0 15px;
-  margin: 0 auto;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 16px;
+  padding-left: 16px;
 }
 
 /* Tablet */
@@ -116,21 +117,25 @@ textarea {
 }
 
 /* Desktop */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .container {
     max-width: 1158px;
+    padding-right: 15px;
+    padding-left: 15px;
   }
 }
 
 .section {
   width: 100%;
-  padding: 96px 0;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 /* Desktop */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1158px) {
   .section {
-    padding: 120px 0;
+    padding-top: 120px;
+    padding-bottom: 120px;
   }
 }
 
@@ -298,19 +303,20 @@ textarea {
 
 .benefits-list {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 72px 24px;
 }
 
 .benefits-item {
   width: 100%;
   height: 100%;
-  flex-basis: calc((100% - 72px) / 4);
 }
 
 .benefits-item-box {
   max-width: 264px;
   height: 112px;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   margin-bottom: 8px;
@@ -324,22 +330,55 @@ textarea {
 
 .benefits-item-title {
   margin-bottom: 8px;
-  font-weight: 500;
-  line-height: 1.2;
+  font-weight: 700;
+  line-height: 1.1;
+  font-size: 36px;
+  text-align: center;
   text-transform: capitalize;
-  font-size: 20px;
   color: var(--title-main-color);
 }
 
 .benefits-item-text {
-  font-weight: 400;
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text-body-color);
 }
 
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .benefits-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+  .benefits-item-title {
+    margin-bottom: 8px;
+    text-align: left;
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1158px) {
+  .benefits-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+  .benefits-item-box {
+    display: flex;
+  }
+  .benefits-item-title {
+    font-weight: 500;
+    line-height: 1.2;
+    font-size: 20px;
+  }
+  .benefits-item-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+}
+
 /*---------------------- Services section---------------------- */
 .services-section {
+  display: none;
   width: 100%;
   padding-bottom: 120px;
 }
@@ -362,13 +401,16 @@ textarea {
   flex-basis: calc((100% - 48px) / 3);
 }
 
+/* Desktop */
+@media screen and (min-width: 1158px) {
+  .services-section {
+    display: flex;
+  }
+}
+
 /*---------------------- Team section---------------------- */
 .team-section {
   background-color: var(--background-light-color);
-}
-
-.team-container {
-  flex-direction: column;
 }
 
 .team-title {
@@ -378,16 +420,17 @@ textarea {
   line-height: 1.11;
   text-align: center;
   text-transform: capitalize;
+  color: var(--title-main-color);
 }
 
 .team-list {
   display: flex;
-  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 72px 24px;
 }
 
 .team-item {
-  flex-basis: calc((100% - 72px) / 4);
-
   background-color: var(--background-main-color);
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16),
     0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -446,6 +489,27 @@ textarea {
   fill: var(--icon-soc-main-color);
 }
 
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .team-container {
+    width: 584px;
+  }
+  .team-item {
+    flex-basis: calc((100% - 24px) / 2);
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1158px) {
+  .team-container {
+    flex-direction: column;
+    width: 1158px;
+  }
+  .team-item {
+    flex-basis: calc((100% - 72px) / 4);
+  }
+}
+
 /*---------------------- Customers section---------------------- */
 
 .customers-container {
@@ -465,11 +529,12 @@ textarea {
 .customers-list {
   display: flex;
   justify-content: center;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 72px 16px;
 }
 
 .customers-item {
-  width: calc((100% - 120px) / 6);
+  width: calc((100% - 16px) / 2);
   height: 88px;
 }
 
@@ -494,25 +559,50 @@ textarea {
   color: var(--icon-clients-logo-accent-color);
 }
 
+/* Tablet */
+@media screen and (min-width: 768px) {
+  .customers-container {
+    width: 584px;
+  }
+  .customers-list {
+    gap: 72px 24px;
+  }
+  .customers-item {
+    width: calc((100% - 48px) / 3);
+  }
+}
+
+/* Desktop */
+@media screen and (min-width: 1158px) {
+  .customers-container {
+    width: 1158px;
+  }
+
+  .customers-item {
+    width: calc((100% - 120px) / 6);
+  }
+}
+
 /*---------------------- Footer section---------------------- */
 
 .footer-section {
-  padding: 100px 0;
   background-color: var(--footer-background-color);
 }
 
 .footer-general-container {
   display: flex;
-  align-items: baseline;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .footer-text-container {
-  margin-right: 120px;
+  text-align: center;
+  margin: 0 auto;
 }
 
 .footer-logo {
   display: inline-block;
-  margin-bottom: 17.5px;
+  margin-bottom: 16px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 800;
@@ -527,16 +617,20 @@ textarea {
 }
 
 .footer-container-text {
-  width: 264px;
+  width: 268px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   color: var(--text-second-color);
+  text-align: left;
+  margin-bottom: 72px;
 }
+
 .footer-soc-container {
-  display: block;
-  margin-right: 80px;
+  text-align: center;
+  margin: 0 auto;
 }
+
 .footer-soc-title {
   font-weight: 500;
   font-size: 16px;
@@ -548,6 +642,7 @@ textarea {
   display: flex;
   justify-content: center;
   gap: 16px;
+  margin-bottom: 72px;
 }
 
 .footer-soc-item {
@@ -574,9 +669,11 @@ textarea {
 
 /*---------------------- Footer form---------------------- */
 
-.footer-form {
+.footer-form-container {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .footer-form-title {
@@ -589,14 +686,16 @@ textarea {
 
 .footer-form-field {
   display: flex;
+  justify-content: center;
 }
 
 .footer-form-input {
   display: block;
   font-family: inherit;
-  min-width: 264px;
+  min-width: 398px;
   height: 40px;
-  margin-right: 24px;
+  margin-bottom: 16px;
+  padding: 8px 16px;
 
   background-color: transparent;
   color: var(--text-third-color);
@@ -606,9 +705,9 @@ textarea {
   letter-spacing: 0.04em;
 
   border: 1px solid #ffffff;
+  opacity: 0.3;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
-  padding: 8px 16px;
   outline: 0;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
