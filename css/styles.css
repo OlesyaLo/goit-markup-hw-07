@@ -798,6 +798,58 @@ textarea {
   }
 }
 
+/* Desktop */
+@media screen and (min-width: 1158px) {
+  .footer-section {
+    padding: 100px 0;
+    display: flex;
+  }
+
+  .footer-general-container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .footer-text-container {
+    text-align: left;
+    margin-right: 120px;
+    margin-bottom: 0;
+  }
+
+  .footer-container-text {
+    width: 264px;
+  }
+
+  .footer-soc-container {
+    text-align: left;
+  }
+
+  .footer-soc-list {
+    margin-right: 80px;
+    margin-bottom: 0;
+  }
+
+  .footer-form-container {
+    display: block;
+    text-align: left;
+  }
+
+  .footer-form {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+  }
+
+  .footer-form-field {
+    display: block;
+  }
+
+  .footer-form-input {
+    width: 264px;
+    opacity: 1;
+  }
+}
+
 /*---------------------- Modal section---------------------- */
 
 .backdrop {
